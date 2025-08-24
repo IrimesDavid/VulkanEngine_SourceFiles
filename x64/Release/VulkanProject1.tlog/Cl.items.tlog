@@ -1,0 +1,16 @@
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_texture.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_texture.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\first_app.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\first_app.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\input_controller.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\input_controller.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_buffer.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_buffer.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_camera.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_camera.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_descriptors.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_descriptors.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_game_object.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_game_object.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_model.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_model.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_pipeline.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_pipeline.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_renderer.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_renderer.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_window.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_window.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\main.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\main.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_device.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_device.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\lve_swap_chain.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\lve_swap_chain.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\Systems\light_system.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\light_system.obj
+C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\Systems\simple_render_system.cpp;C:\Dev\Work\CODING\VULKAN_PROJECTS\VulkanProject1\VulkanProject1\x64\Release\simple_render_system.obj
