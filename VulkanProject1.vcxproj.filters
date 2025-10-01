@@ -63,6 +63,12 @@
     <ClCompile Include="lve_texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lve_cubemap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\skybox_render_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lve_window.h">
@@ -122,6 +128,12 @@
     <ClInclude Include="lve_texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="lve_cubemap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\skybox_render_system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\simple_shader.vert" />
@@ -131,5 +143,7 @@
     </None>
     <None Include="Shaders\light.vert" />
     <None Include="Shaders\light.frag" />
+    <None Include="Shaders\skybox.vert" />
+    <None Include="Shaders\skybox.frag" />
   </ItemGroup>
 </Project>

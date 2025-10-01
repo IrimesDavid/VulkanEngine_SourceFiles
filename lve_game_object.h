@@ -45,6 +45,12 @@ namespace lve {
 
 
 		id_t getId() { return id; }
+		uint32_t getMeshCount() {
+			if (model) {
+				return static_cast<uint32_t>(model->meshes.size());
+			}
+			return 0;
+		}
 
 		glm::vec3 color{};
 		TransformComponent transform{};

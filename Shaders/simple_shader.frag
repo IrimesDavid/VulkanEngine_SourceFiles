@@ -48,7 +48,7 @@ void main(){
 
 
 		float cosAngIncidence = max(dot(surfaceNormal, directionToLight), 0.0);
-		vec3 intensity = light.color.xyz * light.color.w * attenuation;
+		vec3 intensity = light.color.xyz * light.color.w; // *attenuation for normal point_light behaviour
 
 		diffuseLight += intensity * cosAngIncidence;
 

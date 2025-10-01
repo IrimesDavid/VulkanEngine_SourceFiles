@@ -63,8 +63,8 @@ namespace lve {
         pipelineConfig.multisampleInfo.rasterizationSamples = lveDevice.getMsaaSampleCount();
         lvePipeline = std::make_unique<LvePipeline>(
             lveDevice,
-            "shaders/light.vert.spv",
-            "shaders/light.frag.spv",
+            "Shaders/light.vert.spv",
+            "Shaders/light.frag.spv",
             pipelineConfig);
     }
 

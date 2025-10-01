@@ -22,12 +22,29 @@ namespace lve {
         defaultTexture = LveTexture::createFromFile(lveDevice, "Textures/white.png");
         assert(defaultTexture && "Default texture pointer is null!");
 
+        // Load skybox cubemap (you'll need to provide the 6 face texture paths)
+        std::array<std::string, 6> skyboxPaths = {
+            "Textures//Skybox//Skybox2//left.tga",   
+            "Textures//Skybox//Skybox2//right.tga",    
+            "Textures//Skybox//Skybox2//bottom.tga",     
+            "Textures//Skybox//Skybox2//top.tga", 
+            "Textures//Skybox//Skybox2//front.tga",  
+            "Textures//Skybox//Skybox2//back.tga"   
+        };
+        skyboxCubemap = LveCubemap::createFromFiles(lveDevice, skyboxPaths);
+
         loadGameObjects();
 
+        uint32_t totalMeshCount = 0;
+        for (auto& kv : gameObjects) {
+            auto& obj = kv.second;
+			totalMeshCount += obj.getMeshCount();
+        }
+
         globalPool = LveDescriptorPool::Builder(lveDevice)
-            .setMaxSets(LveSwapChain::MAX_FRAMES_IN_FLIGHT + gameObjects.size())
+            .setMaxSets(LveSwapChain::MAX_FRAMES_IN_FLIGHT + totalMeshCount)
             .addPoolSize(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, LveSwapChain::MAX_FRAMES_IN_FLIGHT)
-            .addPoolSize(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, gameObjects.size())
+            .addPoolSize(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, totalMeshCount)
             .build();
         createSystemsAndDescriptorLayouts();
         createDescriptorSets();
@@ -87,6 +104,7 @@ namespace lve {
 
                 //render
                 lveRenderer.beginSwapChainRenderPass(commandBuffer);
+                skyboxRenderSystem->render(frameInfo);
                 simpleRenderSystem->renderGameObjects(frameInfo);
 				lightSystem->render(frameInfo);
                 lveRenderer.endSwapChainRenderPass(commandBuffer);
@@ -101,13 +119,13 @@ namespace lve {
 
         //Obj1
         auto gameObj = LveGameObject::createGameObject();
-        std::shared_ptr<LveModel> lveModel = LveModel::createModelFromFile(lveDevice, "C://Dev//Work//CODING//VULKAN_PROJECTS//VulkanProject1//VulkanProject1//Models//bricks//bricks.obj");
+        std::shared_ptr<LveModel> lveModel = LveModel::createModelFromFile(lveDevice, "C://Dev//Work//CODING//VULKAN_PROJECTS//VulkanProject1//VulkanProject1//Models//city//city.obj");
         gameObj.model = lveModel;
             //gameObj.transform.translation = { 0.0f, 0.0f, 2.5f };
         gameObjects.emplace(gameObj.getId(), std::move(gameObj));
 
         //Lights
-        {
+        /*{
             auto lightObj = LveGameObject::makeLight(2.f, 0.1f, glm::vec3(1.f, 0.f, 0.f));
             lightObj.transform.translation = { 1.0f, -2.5f, -1.f };
             gameObjects.emplace(lightObj.getId(), std::move(lightObj));
@@ -117,36 +135,40 @@ namespace lve {
             auto lightObj = LveGameObject::makeLight(2.f, 0.1f, glm::vec3(0.f, 1.f, 0.f));
             lightObj.transform.translation = { -1.0f, -2.5f, -1.f };
             gameObjects.emplace(lightObj.getId(), std::move(lightObj));
-        }
+        }*/
 
         {
-            auto lightObj = LveGameObject::makeLight(2.f, 0.1f, glm::vec3(0.f, 0.f, 1.f));
-            lightObj.transform.translation = { 0.0f, -2.5f, 1.f };
+            auto lightObj = LveGameObject::makeLight(1.f, 0.1f, glm::vec3(1.f, 1.f, 1.f));
+            lightObj.transform.translation = { 0.0f, -2.5f, -5.f };
             gameObjects.emplace(lightObj.getId(), std::move(lightObj));
         }
     }
     void FirstApp::createDescriptorSets() {
         for (auto& kv : gameObjects) {
             auto& obj = kv.second;
-            auto id = kv.first;
 
             if (obj.model == nullptr) continue;
-            if (!obj.model->fragmentBuffer.diffuseTexture) {
-                obj.model->fragmentBuffer.diffuseTexture = defaultTexture;
+            for (auto& kv : obj.model->meshes) {
+                auto& mesh = kv.second;
+                auto id = kv.first;
+
+                if (!mesh.fragmentBuffer.diffuseTexture) {
+                    mesh.fragmentBuffer.diffuseTexture = defaultTexture;
+                }
+
+                VkDescriptorImageInfo diffuseInfo{};
+                diffuseInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+                diffuseInfo.imageView = mesh.fragmentBuffer.diffuseTexture->getImageView();
+                diffuseInfo.sampler = mesh.fragmentBuffer.diffuseTexture->getSampler();
+
+
+                VkDescriptorSet descriptorSet;
+                LveDescriptorWriter(*textureSetLayout, *globalPool)
+                    .writeImage(0, &diffuseInfo) //diffuse at binding 0
+                    .build(descriptorSet);
+
+                textureDescriptorSets[id] = descriptorSet;
             }
-
-            VkDescriptorImageInfo diffuseInfo{};
-            diffuseInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-            diffuseInfo.imageView = obj.model->fragmentBuffer.diffuseTexture->getImageView();
-            diffuseInfo.sampler = obj.model->fragmentBuffer.diffuseTexture->getSampler();
-
-
-            VkDescriptorSet descriptorSet;
-            LveDescriptorWriter(*textureSetLayout, *globalPool)
-                .writeImage(0, &diffuseInfo) //diffuse at binding 0
-                .build(descriptorSet);
-
-            textureDescriptorSets[id] = descriptorSet;
         }
 	}
 
@@ -177,11 +199,17 @@ namespace lve {
 
         lveRenderer.recreateSwapChain();
 
+        uint32_t totalMeshCount = 0;
+        for (auto& kv : gameObjects) {
+            auto& obj = kv.second;
+            totalMeshCount += obj.getMeshCount();
+        }
+
         globalPool = LveDescriptorPool::Builder(lveDevice)
-            .setMaxSets(LveSwapChain::MAX_FRAMES_IN_FLIGHT + gameObjects.size())
+            .setMaxSets(LveSwapChain::MAX_FRAMES_IN_FLIGHT + totalMeshCount)
             .addPoolSize(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, LveSwapChain::MAX_FRAMES_IN_FLIGHT)
-            .addPoolSize(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, gameObjects.size())
-            .build();        
+            .addPoolSize(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, totalMeshCount)
+            .build();
         createSystemsAndDescriptorLayouts();
         createDescriptorSets();
 
@@ -202,13 +230,21 @@ namespace lve {
         // - GLOBAL (UBO) layout (set=0) -
         globalSetLayout = LveDescriptorSetLayout::Builder(lveDevice)
             .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_ALL_GRAPHICS)
+			.addBinding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT) //Skybox cubemap
             .build();
 
         globalDescriptorSets = std::vector<VkDescriptorSet>(LveSwapChain::MAX_FRAMES_IN_FLIGHT);
         for (int i = 0; i < globalDescriptorSets.size(); i++) {
             auto bufferInfo = uboBuffers[i]->descriptorInfo();
+            
+            VkDescriptorImageInfo skyboxInfo{};
+            skyboxInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+            skyboxInfo.imageView = skyboxCubemap->getImageView();
+            skyboxInfo.sampler = skyboxCubemap->getSampler();
+
             LveDescriptorWriter(*globalSetLayout, *globalPool)
                 .writeBuffer(0, &bufferInfo)
+                .writeImage(1, &skyboxInfo) // Skybox cubemap at binding 1
                 .build(globalDescriptorSets[i]);
         }
 
@@ -231,6 +267,12 @@ namespace lve {
         );
 
         lightSystem = std::make_unique<LightSystem>(
+            lveDevice,
+            lveRenderer.getSwapChainRenderPass(),
+            globalSetLayout->getDescriptorSetLayout()
+        );
+
+        skyboxRenderSystem = std::make_unique<SkyboxRenderSystem>(
             lveDevice,
             lveRenderer.getSwapChainRenderPass(),
             globalSetLayout->getDescriptorSetLayout()

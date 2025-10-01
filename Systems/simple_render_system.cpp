@@ -56,8 +56,8 @@ namespace lve {
         pipelineConfig.multisampleInfo.rasterizationSamples = lveDevice.getMsaaSampleCount();
         lvePipeline = std::make_unique<LvePipeline>(
             lveDevice,
-            "shaders/simple_shader.vert.spv",
-            "shaders/simple_shader.frag.spv",
+            "Shaders/simple_shader.vert.spv",
+            "Shaders/simple_shader.frag.spv",
             pipelineConfig);
     }
 
@@ -77,45 +77,49 @@ namespace lve {
         // Loop over all objects
         for (auto& kv : frameInfo.gameObjects) {
 			auto& obj = kv.second;
-			auto id = kv.first;
 
 			if (obj.model == nullptr) continue;
-            
-            // --- Push constants ---
-            SimplePushConstantData push{};
-            push.modelMatrix = obj.transform.mat4();
-            push.normalMatrix = obj.transform.normalMatrix();
 
-            vkCmdPushConstants(
-                frameInfo.commandBuffer,
-                pipelineLayout,
-                VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT,
-                0,
-                sizeof(SimplePushConstantData),
-                &push);
+            // Loop over all meshes in the model
+            for (auto& kv : obj.model->meshes) {
+                uint32_t id = kv.first;
+                auto& mesh = kv.second;
+
+                // --- Push constants ---
+                SimplePushConstantData push{};
+                push.modelMatrix = obj.transform.mat4();
+                push.normalMatrix = obj.transform.normalMatrix();
+
+                vkCmdPushConstants(
+                    frameInfo.commandBuffer,
+                    pipelineLayout,
+                    VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT,
+                    0,
+                    sizeof(SimplePushConstantData),
+                    &push);
 
 
-            // Defensive check
-            if (frameInfo.textureDescriptorSets.count(id) == 0) {
-                printf("Descriptor set missing for object ID: %u", id);
-                continue;
+                // Defensive check
+                if (frameInfo.textureDescriptorSets.count(id) == 0) {
+                    printf("Descriptor set missing for mesh ID: %u", id);
+                    continue;
+                }
+                VkDescriptorSet set = frameInfo.textureDescriptorSets.at(id);
+                assert(set != VK_NULL_HANDLE && "Descriptor set is null!");
+
+                // --- Bind the texture descriptor set (set = 1) ---
+                vkCmdBindDescriptorSets(
+                    frameInfo.commandBuffer,
+                    VK_PIPELINE_BIND_POINT_GRAPHICS,
+                    pipelineLayout,
+                    1, 1,
+                    &frameInfo.textureDescriptorSets.at(id),
+                    0, nullptr);
+
+                // --- Bind and draw model ---
+                mesh.bind(frameInfo.commandBuffer);
+                mesh.draw(frameInfo.commandBuffer);
             }
-            VkDescriptorSet set = frameInfo.textureDescriptorSets.at(id);
-            assert(set != VK_NULL_HANDLE && "Descriptor set is null!");
-
-
-            // --- Bind the texture descriptor set (set = 1) ---
-            vkCmdBindDescriptorSets(
-                frameInfo.commandBuffer,
-                VK_PIPELINE_BIND_POINT_GRAPHICS,
-                pipelineLayout,
-                1, 1,
-                &frameInfo.textureDescriptorSets.at(id),
-                0, nullptr);
-
-            // --- Bind and draw model ---
-            obj.model->bind(frameInfo.commandBuffer);
-            obj.model->draw(frameInfo.commandBuffer);
         }
     }
 

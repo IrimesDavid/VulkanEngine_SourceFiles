@@ -7,7 +7,9 @@
 #include "lve_descriptors.h"
 #include "Systems/simple_render_system.h"
 #include "Systems/light_system.h"
+#include "Systems/skybox_render_system.h"
 #include "lve_texture.h"
+#include "lve_cubemap.h"
 #include "lve_utils.h"
 
 // std
@@ -44,6 +46,7 @@ namespace lve {
 		std::unique_ptr<LveDescriptorPool> globalPool{};
 		LveGameObject::Map gameObjects;
 		std::shared_ptr<LveTexture> defaultTexture; //fallback texture
+		std::shared_ptr<LveCubemap> skyboxCubemap; //skybox cubemap
 		StatusBar statusBar;
 
 		std::vector<std::unique_ptr<LveBuffer>> uboBuffers;
@@ -53,5 +56,6 @@ namespace lve {
 		std::unordered_map<id_t, VkDescriptorSet> textureDescriptorSets;
 		std::unique_ptr<SimpleRenderSystem> simpleRenderSystem{};
 		std::unique_ptr<LightSystem> lightSystem{};
+		std::unique_ptr<SkyboxRenderSystem> skyboxRenderSystem{};
 	};
 }  // namespace lve

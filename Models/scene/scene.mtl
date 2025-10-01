@@ -1,0 +1,741 @@
+# Blender 4.0.2 MTL File: 'final_scene.blend'
+# www.blender.org
+
+newmtl Atlas_2048x2048_01
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Atlas_2048x2048_01_baseColor.png
+
+newmtl Bottom
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Bottom_baseColor.png
+map_bump Bottom_normal.png
+
+newmtl Brick_Wall
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd diffuse.png
+map_bump normal.png
+
+newmtl CarBody
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd CarBody_baseColor.png
+map_Pm CarBody_metallicRoughness.png
+map_bump CarBody_normal.png
+
+newmtl DetailRoof
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd DetailRoof_baseColor.png
+
+newmtl Details
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Details_baseColor.png
+map_Pm Details_metallicRoughness.png
+map_bump Details_normal.png
+
+newmtl DoorsWindows
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd DoorsWindows_baseColor.png
+
+newmtl Garage_flats
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Garage_flats_baseColor.png
+map_bump Garage_flats_normal.png
+
+newmtl Ground
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd base_m_diffuse.png
+map_bump 1K-ground_8-normal.png
+
+newmtl Interior
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Interior_baseColor.png
+map_bump Interior_normal.png
+
+newmtl Lights_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd glass_mat_diffuse.png
+map_Ke emit1.png
+
+newmtl Material.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Material.002_baseColor.png
+map_bump Material.002_normal.png
+
+newmtl Material_107
+Ns 375.434723
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Material_107_baseColor.png
+map_bump Material_107_normal.png
+
+newmtl Material_24
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Material_24_baseColor.png
+
+newmtl Scene_-_Root
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Scene_-_Root_baseColor.png
+map_bump Scene_-_Root_normal.png
+
+newmtl air_conditioning.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd air_conditioning.001_baseColor.png
+map_bump air_conditioning.001_normal.png
+
+newmtl atlas_B517
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd atlas_B517_baseColor.png
+
+newmtl atlas_mat.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd atlas_mat_diffuse.png
+map_bump atlas_mat_normal.png
+
+newmtl base_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd base_m_diffuse.png
+map_bump base_m_normal.png
+
+newmtl blackpaint_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd blackpaint_m_diffuse.png
+map_bump blackpaint_m_normal.png
+
+newmtl box2_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd box2_m_diffuse.png
+map_bump box2_m_normal.png
+
+newmtl camera
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd camera_baseColor.png
+map_Pm camera_metallicRoughness.png
+map_bump camera_normal.png
+
+newmtl concrete_floor_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd concrete_floor_m_diffuse.png
+map_bump concrete_floor_m_normal.png
+
+newmtl container01textred
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd container01textred_baseColor.png
+map_Ks container01textred_specularf0.png
+map_bump container01textred_normal.png
+
+newmtl containertext-blue
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd containertext-blue_baseColor.png
+map_Ks container01textred_specularf0.png
+map_bump container01textred_normal.png
+
+newmtl containertext-gray
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd containertext-gray_baseColor.png
+map_Ks container01textred_specularf0.png
+map_bump container01textred_normal.png
+
+newmtl containertext-green
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd containertext-green_baseColor.png
+map_Ks container01textred_specularf0.png
+map_bump container01textred_normal.png
+
+newmtl containertext-orange
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd containertext-orange_baseColor.png
+map_Ks container01textred_specularf0.png
+map_bump container01textred_normal.png
+
+newmtl containertext-yellow
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd containertext-yellow_baseColor.png
+map_Ks container01textred_specularf0.png
+map_bump container01textred_normal.png
+
+newmtl decalMoss
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd decalMoss01_baseColor.png
+map_d decalMoss01_alpha.png
+
+newmtl decalMoss01
+Ns 32.000008
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd decalMoss01_baseColor.png
+map_d decalMoss01_alpha.png
+
+newmtl eletricBox.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd eletricBox.001_baseColor.png
+map_bump eletricBox.001_normal.png
+
+newmtl emptyBillboard
+Ns 32.000008
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd emptyBillboard_baseColor.png
+
+newmtl facadeBare
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd facadeBare_baseColor.jpeg
+map_bump facadeBare_normal.png
+
+newmtl fencebase_mat.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd fencebase_mat_diffuse.png
+map_bump fencebase_mat_normal.png
+
+newmtl fenceframe_mat.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd fenceframe_mat_diffuse.png
+map_bump fenceframe_mat_normal.png
+
+newmtl fencemesh_mat.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd fencemesh_mat_diffuse.png
+map_d fencemesh_mat_opacity.png
+
+newmtl fencerings_mat.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd fencerings_mat_diffuse.png
+map_bump fencerings_mat_normal.png
+
+newmtl fix_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd fix_m_diffuse.png
+
+newmtl gasSign
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd gasSign_baseColor.png
+map_bump gasSign_normal.png
+
+newmtl gate_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd gate_m_diffuse.png
+map_Pm gate_m_metallic.png
+map_bump gate_m_normal.png
+
+newmtl industrialDoor
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd industrialDoor_baseColor.png
+map_bump industrialDoor_normal.png
+
+newmtl industrialWindow
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd industrialWindow_baseColor.png
+map_bump industrialWindow_normal.png
+
+newmtl industrialWindow-Small
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd industrialWindow-Small_baseColor.png
+
+newmtl lamp3_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lamp3_m_diffuse.png
+map_bump lamp3_m_normal.png
+
+newmtl lampframe_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lampframe_m_diffuse.png
+map_bump lampframe_m_normal.png
+
+newmtl lampgrill_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lampgrill_m_diffuse.png
+map_bump lampgrill_m_normal.png
+
+newmtl main_Bricks
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd main_Bricks_baseColor.jpeg
+map_bump main_Bricks_normal.png
+
+newmtl marks_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd marks_m_diffuse.png
+map_bump marks_m_normal.png
+
+newmtl oldBare
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd oldBare_baseColor.jpeg
+
+newmtl parapet
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd parapet_baseColor.jpeg
+
+newmtl pipechair1_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd pipechair1_m_diffuse.png
+map_bump pipechair1_m_normal.png
+
+newmtl plastic_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd plastic_m_diffuse.png
+map_bump plastic_m_normal.png
+
+newmtl rollUpDoor
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rollUpDoor_baseColor.png
+
+newmtl roofingSheets
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd roofingSheets_baseColor.png
+map_bump roofingSheets_normal.png
+
+newmtl rusty_light_bulb.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rusty_light_bulb.001_baseColor.png
+map_Ke rusty_light_bulb.001_emissive.png
+map_bump rusty_light_bulb.001_normal.png
+
+newmtl sideWalk
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd sideWalk_baseColor.jpeg
+
+newmtl sideWalkEdge
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd sideWalkEdge_baseColor.jpeg
+
+newmtl stationRoof
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd stationRoof_baseColor.png
+
+newmtl steel_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd steel_m_diffuse.png
+map_bump steel_m_normal.png
+
+newmtl switches_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd switches_m_diffuse.png
+map_bump switches_m_normal.png
+
+newmtl vent_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd vent_m_diffuse.png
+map_bump vent_m_normal.png
+
+newmtl vents
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd vents_baseColor.png
+
+newmtl water_Tower_Diff
+Ns 32.000008
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd water_Tower_Diff_baseColor.png
+
+newmtl water_Tower_Transparency
+Ns 32.000008
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd water_Tower_Transparency_baseColor.png
+map_d water_Tower_alpha.png
+
+newmtl white_light2_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd glass_mat_diffuse.png
+map_Ke emit2.png
+
+newmtl white_light_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd whitepaint_m_diffuse.png
+
+newmtl whitepaint_m.002
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd whitepaint_m_diffuse.png
+map_bump whitepaint_m_normal.png
+
+newmtl woodenFence
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd woodenFence_baseColor.png

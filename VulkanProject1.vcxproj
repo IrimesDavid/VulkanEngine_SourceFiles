@@ -163,6 +163,7 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="lve_cubemap.cpp" />
     <ClCompile Include="lve_texture.cpp" />
     <ClCompile Include="first_app.cpp" />
     <ClCompile Include="input_controller.cpp" />
@@ -179,8 +180,10 @@
     <ClCompile Include="lve_swap_chain.cpp" />
     <ClCompile Include="Systems\light_system.cpp" />
     <ClCompile Include="Systems\simple_render_system.cpp" />
+    <ClCompile Include="Systems\skybox_render_system.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="lve_cubemap.h" />
     <ClInclude Include="lve_texture.h" />
     <ClInclude Include="Externals\stb_image.h" />
     <ClInclude Include="first_app.h" />
@@ -200,6 +203,7 @@
     <ClInclude Include="Systems\light_system.h" />
     <ClInclude Include="Systems\simple_render_system.h" />
     <ClInclude Include="Externals\tiny_obj_loader.h" />
+    <ClInclude Include="Systems\skybox_render_system.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="compile.bat" />
@@ -207,6 +211,8 @@
     <None Include="Shaders\light.vert" />
     <None Include="Shaders\simple_shader.frag" />
     <None Include="Shaders\simple_shader.vert" />
+    <None Include="Shaders\skybox.frag" />
+    <None Include="Shaders\skybox.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
